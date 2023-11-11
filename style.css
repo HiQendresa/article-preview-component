@@ -183,13 +183,13 @@ main .container .share-banner .social-media {
 }
 @media screen and (min-width: 1200px) {
   main .container .share-banner {
-    width: 248px;
-    height: 55px;
+    width: 200px;
+    height: 60px;
     border-radius: 10px;
     fill: var(--very-dark-grayish);
     filter: drop-shadow(0px 10px 10px rgba(201, 213, 225, 0.5));
     bottom: 37%;
-    right: -13%;
+    right: -9%;
   }
   main .container .share-banner ::after {
     content: "";
@@ -201,6 +201,9 @@ main .container .share-banner .social-media {
     left: 46%;
     transform: translate(-50%, -50%);
     transform: rotate(180deg);
+  }
+  main .container .share-banner svg {
+    display: none;
   }
 }
 main .container .show {
