@@ -40,6 +40,7 @@ body {
   max-width: 1440px;
   position: relative;
   font-size:  13px;
+  background: #ECF2F8;
 }
 
 a:not([class]) {
@@ -50,4 +51,184 @@ img,
 picture {
   width: 100%;
   display: block;
+}
+
+main {
+  padding: 15px;
+
+  .container {
+    position: relative;
+    width: 327px;
+    margin: 5% auto;
+
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.50);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen  and (min-width:1200px){
+      width: 730px;
+      max-height: 280px;
+      flex-direction: row;
+    }
+
+    .image {
+      max-width: 350px;
+      max-height: 280px;
+      flex-shrink: 0;
+
+      img {
+        border-radius: 8px 8px 0 0px;
+
+        @media screen  and (min-width:1200px){
+          border-radius: 8px 0 0 8px;
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 15px;
+
+      @media screen  and (min-width:1200px){
+        padding: 13px;
+      }
+
+      .title {
+        width: 263px;
+
+        color: var(--very-dark-grayish);
+        font-family: var(--font-family);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; 
+        letter-spacing: 0.2px;
+      }
+      
+      .description {
+        color: var(--desaturated-dark-blue);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.122px;
+      }
+
+      .author {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 15px 0 10px 0;
+
+        .author-info {
+          display: flex;
+          align-items: center;
+          gap: 10px;   
+
+            .image{
+              width: 40px;
+              height: 40px;
+
+              img {
+                border-radius: 40px;
+              }
+            }
+            .author-name {
+              p {
+                color: var(--very-dark-grayish);
+                font-family: var(--font-family);
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 20px;
+                letter-spacing: 0.122px;
+              }
+    
+              span {
+                display: block;
+    
+                color: var(--grayish-blue);
+                font-weight: 500;
+              }
+            }
+        }
+        
+        .share {
+          width: 32px;
+          height: 32px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .share-banner {
+      width: 327px;
+      height: 70px;
+
+      border-radius: 0px 0px 10px 10px;
+      background: var(--very-dark-grayish);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 22px;
+
+      position: absolute;
+      bottom: 0;
+      display: none;
+
+      p {
+        color: var(--grayish-blue);
+        font-family: var(--font-family);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 5px;
+      }
+
+      .social-media{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items:center;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 248px;
+        height: 55px;
+        border-radius: 10px;
+        fill: var(--very-dark-grayish);
+        filter: drop-shadow(0px 10px 10px rgba(201, 213, 225, 0.50));
+
+        bottom: 37%;
+        right: -13%;
+
+        ::after {
+          content: '';
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 13px solid var(--very-dark-grayish);
+          position: absolute;
+          top: 98%;
+          left: 46%;    
+          transform: translate(-50%, -50%);
+          transform: rotate(180deg);
+        }
+      }
+
+     
+    }
+
+    .show {
+      display: flex !important;
+    }
+  }
 }
